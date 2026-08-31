@@ -650,7 +650,6 @@ SPIRVNonSemanticDebugHandler::emitDebugTypeFunctionForSubroutineType(
   return getOrEmitDebugTypeFunction(Ops, VoidTypeReg, ExtInstSetReg, MAI);
 }
 
-// Match SPIRV-LLVM-Translator's selection logic for the Parent operand.
 std::optional<MCRegister> SPIRVNonSemanticDebugHandler::resolveScope(
     const DIScope *Scope, const DICompileUnit *FallbackCU) const {
   if (const auto *Ty = dyn_cast_or_null<DIType>(Scope))
